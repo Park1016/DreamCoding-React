@@ -1,10 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import styles from './app.module.css';
 import Login from './components/login/login';
-import {BrowserRouter} from 'react-router-dom';
 
-function App({authService}) {
-  return <Login authService={authService}/>;
+function App({ authService }) {
+  return (
+    <div className={styles.app}>
+      <Login authService={authService} />
+    </div>
+  );
 }
 
 export default App;
